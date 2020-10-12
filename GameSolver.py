@@ -46,37 +46,37 @@ def Moves(Player, Board):
                             moveList[-1][i+1][j+1]='_'
                             moveList[-1][i+2][j+2]=piece
                             
-                if i-1>0 and j+1<len(Board[i]):
+                if i-1>=0 and j+1<len(Board[i]):
                     if Board[i-1][j+1] == '_':
                         moveList.append(Copy(Board))
                         moveList[-1][i][j]='_'
                         moveList[-1][i-1][j+1]=piece
                     elif Board[i-1][j+1] == piece2:
-                        if i-2>0 and j+2<len(Board[i]):
+                        if i-2>=0 and j+2<len(Board[i]):
                             moveList.append(Copy(Board))
                             moveList[-1][i][j]='_'
                             moveList[-1][i-1][j+1]='_'
                             moveList[-1][i-2][j+2]=piece
                             
-                if i+1<len(Board) and j-1<len(Board[i]):
+                if i+1<len(Board) and j-1>=0:
                     if Board[i+1][j-1] == '_':
                         moveList.append(Copy(Board))
                         moveList[-1][i][j]='_'
                         moveList[-1][i+1][j-1]=piece
                     elif Board[i+1][j-1] == piece2:
-                        if i+2<len(Board) and j-2>0:
+                        if i+2<len(Board) and j-2>=0:
                             moveList.append(Copy(Board))
                             moveList[-1][i][j]='_'
                             moveList[-1][i+1][j-1]='_'
                             moveList[-1][i+2][j-2]=piece
                             
-                if i-1>0 and j-1>0:
+                if i-1>=0 and j-1>=0:
                     if Board[i-1][j-1] == '_':
                         moveList.append(Copy(Board))
                         moveList[-1][i][j]='_'
                         moveList[-1][i-1][j-1]=piece
                     elif Board[i-1][j-1] == piece2:
-                        if i-2>0 and j-2>0:
+                        if i-2>=0 and j-2>=0:
                             moveList.append(Copy(Board))
                             moveList[-1][i][j]='_'
                             moveList[-1][i-1][j-1]='_'
